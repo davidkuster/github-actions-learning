@@ -34,5 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "pwd = $pwd"
+          set -ex
+          cd $GITHUB_WORKSPACE
+          echo "pwd in $GITHUB_WORKSPACE = $pwd"
           ls -l
